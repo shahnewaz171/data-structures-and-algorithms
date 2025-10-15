@@ -31,6 +31,22 @@ class LinkedList {
     this.size++;
   }
 
+  append(value) {
+    const node = new Node(value);
+
+    if (this.isEmpty()) {
+      this.head = node;
+    } else {
+      let prev = this.head;
+
+      while (prev.next) {
+        prev = prev.next;
+      }
+      prev.next = node;
+    }
+    this.size++;
+  }
+
   insert(value, position) {
     if (position < 0 || position > this.size) return;
 
@@ -169,6 +185,10 @@ list.prepend(30);
 list.prepend(20);
 list.insert(10, 0);
 list.prepend(5);
+
+list.append(5);
+list.print();
+
 // list.removeFrom(3);
 // list.removeValue(10);
 list.print();
@@ -177,5 +197,6 @@ list.toReverse();
 // list.print();
 list.reverse();
 list.print();
+
 // time complexity: O(1)
 // space complexity: O(n) where n is the number of elements in the linked list
