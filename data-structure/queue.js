@@ -6,10 +6,12 @@ class Queue {
   enqueue(element) {
     this.items.push(element);
   }
-  peak() {
+
+  peek() {
     if (this.isEmpty()) return null;
     return this.items[0];
   }
+
   dequeue() {
     if (this.isEmpty()) return "Queue is empty!";
     return this.items.shift();
@@ -34,7 +36,7 @@ console.log(queue.size());
 queue.print();
 
 console.log(queue.dequeue());
-console.log(queue.peak());
+console.log(queue.peek());
 
 // time complexity: O(n) for dequeue because of shift operation
 // space complexity: O(n) where n is the number of elements in the queue

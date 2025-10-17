@@ -19,9 +19,11 @@ class Queue {
   isEmpty() {
     return this.rear - this.front === 0;
   }
-  peak() {
+
+  peek() {
     return this.items[this.front] || null;
   }
+
   size() {
     return this.rear - this.front;
   }
@@ -38,7 +40,7 @@ console.log(queue.size());
 queue.print();
 
 console.log(queue.dequeue());
-console.log(queue.peak());
+console.log(queue.peek());
 
-// time complexity: O(1) for all operations (enqueue, dequeue, peak, isEmpty, size)
+// time complexity: O(1) for all operations (enqueue, dequeue, peek, isEmpty, size)
 // space complexity: O(n) where n is the number of elements in the queue

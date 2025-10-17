@@ -40,7 +40,7 @@ class CircularQueue {
     return this.currentLength === 0;
   }
 
-  peak() {
+  peek() {
     if (this.isEmpty()) return "Queue is empty!";
     return this.items[this.front];
   }
@@ -77,14 +77,14 @@ console.log(queue.isFull());
 queue.print();
 
 console.log(queue.dequeue());
-console.log(queue.peak());
+console.log(queue.peek());
 queue.print();
 
 queue.enqueue(60);
 queue.print();
 
 console.log("test for newly added element:", queue.dequeue());
-console.log(queue.peak());
+console.log(queue.peek());
 queue.print();
 
 // time complexity: O(1)

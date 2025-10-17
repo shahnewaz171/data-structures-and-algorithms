@@ -50,4 +50,5 @@ table.set("age", 30);
 table.set("mane", 10);
 table.display();
 
-// console.log(table.display()); // Example usage
+// Time Complexity: O(1) average case for set, get, remove
+// Space Complexity: O(n) where n is the number of key-value pairs

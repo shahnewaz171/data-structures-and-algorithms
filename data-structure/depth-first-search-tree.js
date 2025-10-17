@@ -48,7 +48,6 @@ class BinarySearchTree {
     return this.search(root.right, value);
   }
 
-  // depth first search
   preOrder(root) {
     if (root) {
       console.log("pre-order", root.value);
@@ -71,10 +70,6 @@ class BinarySearchTree {
       this.postOrder(root.right);
       console.log("post-order", root.value);
     }
-  }
-
-  print() {
-    console.log("dasdasd", this.root);
   }
 }
 

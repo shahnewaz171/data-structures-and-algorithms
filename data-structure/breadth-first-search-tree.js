@@ -48,7 +48,8 @@ class BinarySearchTree {
     return this.search(root.right, value);
   }
 
-  // breadth first search
+  // Breadth First Search - Level Order Traversal
+  // Uses queue with index tracking for O(1) dequeue operations
   levelOrder() {
     const queue = [];
     queue.push(this.root);
@@ -65,10 +66,6 @@ class BinarySearchTree {
       }
     }
   }
-
-  print() {
-    console.log("dasdasd", this.root);
-  }
 }
 
 const bst = new BinarySearchTree();
@@ -79,7 +76,6 @@ bst.insertValue(5);
 bst.insertValue(15);
 bst.insertValue(3);
 bst.insertValue(7);
-// bst.print();
 
 bst.levelOrder();
 
