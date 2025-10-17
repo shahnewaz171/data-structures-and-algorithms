@@ -54,10 +54,9 @@ class Graph {
   }
 
   print() {
-    // for (let vertex in this.adjacencyList) {
-    //   console.log(`${vertex} -> ${[...this.adjacencyList[vertex]]}`);
-    // }
-    console.log(this.adjacencyList);
+    for (let vertex in this.adjacencyList) {
+      console.log(`${vertex} -> ${[...this.adjacencyList[vertex]]}`);
+    }
   }
 }
 
@@ -70,7 +69,14 @@ graph.addEdge("A", "B");
 graph.addEdge("B", "C");
 graph.print();
 
+console.log("hasEdge:", graph.hasEdge("B", "C"));
+
 graph.removeVertex("A");
-// graph.removeEdge("B", "C");
 graph.print();
-// console.log("hasEdge", graph.hasEdge("A", "C"));
+
+// Time Complexity:
+// - addVertex: O(1)
+// - addEdge: O(1)
+// - removeVertex: O(V + E) where V is vertices and E is edges
+// - removeEdge: O(1)
+// Space Complexity: O(V + E)

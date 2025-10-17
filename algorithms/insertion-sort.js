@@ -1,5 +1,5 @@
 function insertionSort(arr) {
-  for (i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let numberToInsert = arr[i];
     let j = i - 1;
 
